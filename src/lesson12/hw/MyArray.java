@@ -88,15 +88,16 @@ public class MyArray<T> implements Collection<T> {
 
     @Override
     public boolean remove(Object o) {
-        for (int i = 0; i < data.length; i++){
+        int i = 0;
+        for (; i < data.length; i++) {
             if(o.equals(data[i])){
-                data[i] = null;
-                ArSize--;
-            }
-            if(data[i] == null){
-                data[i + 1] = data[i];
+                break;
             }
         }
+        for (int j = i; j < data.length; j++) {
+            data[j] = data[j + 1];
+        }
+        ArSize--;
         return true;
     }
 
