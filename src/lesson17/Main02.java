@@ -23,8 +23,10 @@ public class Main02 {
         public int quantity;
 
         public OrderItem(String name, int quantity) {
+            int a = 1/quantity;
             this.name = name;
             this.quantity = quantity;
+
         }
     }
     // Controller - розділення логіки програми на окремі модулі
@@ -41,7 +43,7 @@ public class Main02 {
         Order order = new Order();
         order.addItem("Powerbank", 1);
         order.addItem("Flashlight", 2);
-        order.addItem("Phone case", 1);
+        order.addItem("Phone case", 0);
 
     }
 }
